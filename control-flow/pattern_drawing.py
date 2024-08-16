@@ -1,11 +1,18 @@
-outer_count = 5
+# pattern_drawing.py
 
-while outer_count > 0:
-  # Outer loop controls the number of times the inner loop runs
-  inner_count = 1
-  while inner_count <= outer_count:
-    # Inner loop repeats for each outer loop iteration
-    print(inner_count, end=" ")
-    inner_count += 1
-  print()  # Move to a new line after each outer loop iteration
-  outer_count -= 1
+# Prompt the user to enter the size of the pattern
+size = int(input("Enter the size of the pattern: "))
+
+# Initialize the row counter
+row = 0
+
+# Use a while loop to iterate through each row
+while row < size:
+    # Use a for loop to print asterisks side by side
+    for _ in range(size):
+        print("*", end="")
+    # Print a newline character to move to the next row
+    print()
+    # Increment the row counter
+    row += 1
+    
